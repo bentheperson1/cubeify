@@ -74,6 +74,10 @@ main {
     transition: 0.3s ease-in-out;
 }
 
+.grid-container {
+    display: flex;
+}
+
 .topnav a:hover {
     background-color: #ddd;
     color: black;
@@ -136,9 +140,6 @@ icon.image-holder:hover {
     background-color: #bbbbbb;
 }
 
-img {
-    mix-blend-mode: multiply;
-}
 
 .pixel-art {
     image-rendering: -moz-crisp-edges;
@@ -146,6 +147,7 @@ img {
     image-rendering: pixelated;
     image-rendering: crisp-edges;
     -webkit-font-smoothing: none;
+    mix-blend-mode: normal;
 }
 
 a {
@@ -157,6 +159,12 @@ li {
     text-align: left;
 }
 
+.card-image {
+    width:50%;
+    height:auto;
+    border-radius: 20%;
+}
+
 .footer {
     position: absolute;
     left: 0;
@@ -166,10 +174,47 @@ li {
     text-align: center;
 }
 
-.lesson-content {
-    display:inline-block;
-    width: 50%;
-    overflow-wrap: break-word;
-    hyphens: auto;
+.flexbox {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 60%;
+    height: 300px;
+    margin: auto;
+    border-radius: 4px;
 }
 
+.flexbox > div {
+/*
+    1/3  - 3 columns per row
+    10px - spacing between columns 
+*/
+box-sizing: border-box;
+margin: 10px 10px 0 0;
+width: calc(1/3*100% - (1 - 1/3)*10px);
+background: #444444;
+padding: 10px;
+color: #fff;
+}
+
+/*
+align last row columns to the left
+3n - 3 columns per row
+*/
+.flexbox > div:nth-child(3n) {
+margin-right: 0;
+}
+
+.flexbox::after {
+content: '';
+flex: auto;
+}
+
+/*
+remove top margin from first row
+-n+3 - 3 columns per row 
+*/
+.flexbox > div:nth-child(-n+3) {
+margin-top: 0;
+}
