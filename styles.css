@@ -158,9 +158,8 @@ li {
 }
 
 .card-image {
-    width:50%;
+    width:100%;
     height:auto;
-    border-radius: 20%;
 }
 
 .footer {
@@ -181,6 +180,7 @@ li {
     height: 300px;
     margin: auto;
     border-radius: 4px;
+    box-shadow: #000;
 }
 
 .flexbox > div {
