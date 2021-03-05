@@ -9,63 +9,29 @@
         <link rel="stylesheet" href="styles.css">
     </head>
     <body>
-        <div class="header-bg">
-            <br>
-            <img src="Cuebify_GameJolt.png" class="header pixel-art">
-            <h2>
-                Cubeify Games
-            </h2>
-            <br>
-        </div>
-        <div class="topnav pixel-art">
-            <a href="index.html"><span>
-                    <h1>Home</h1>
-                </span>
-            </a>
-            <a class="active" href="Games.html"><span>
-                    <h1>Games</h1>
-                </span>
-            </a>
-            <a href="team.html"><span>
-                    <h1>Team</h1>
-                </span>
-            </a>
-        </div>
-        <main>
-            <h1 style="text-shadow: 0px 4px black;">
-                Games & projects!
-            </h1>
-            <div class="flexbox">
-                <div class="card">
-                    <a target="_blank" href="Magestar.webp">
-                    <img src="Magestar.webp" alt="Magestar" class="card-image">
-                    </a>
-                    <div class="container">
-                        <h2>Magestar</h2>
-                    </div>
+        <div class="pixel-art">
+            <div class="container">
+                <div class="logo">
+                    <a href="#"><img src="images/Cuebify_GameJolt.png" alt="logo"></a>
                 </div>
-
-                <div class="card">
-                    <video width="50%" height="auto" controls>
-                        <source src="PocketGachi.mp4" type="video/mp4">
-                        <source src="PocketGachi - Copy.oog" type="video/ogg">
-                        Your browser does not support the video tag.
-                      </video>
-                    <div class="container">
-                        <h2>PocketGachi</h2>
-                    </div>
-                </div>
-                
-                <div class="card">
-                    <a target="_blank" href="WhiteNoise.webp">
-                    <img src="WhiteNoise.webp" alt="WhiteNoise" class="card-image">
-                    <div class="container">
-                        <h2>WhiteNoise</h2>
-                    </div>
-                </div>
+            <div class="navbar">
+            
+            <div class="icon-bar" onclick="Show()">
+                <i></i>
+                <i></i>
+                <i></i>
             </div>
             
-        </main>
-        <script src="" async defer></script>
+            <ul id="nav-lists pixel-art">
+                <li class="close"><span onclick="Hide()">×</span></li>
+                <li><a href="index.html"><h2>Home</h2></a></li>
+                <li><a href="Games.html"><h2>Games</h2></a></li>
+                <li><a href="#"><h2>Team</h2></a></li>
+                <li><a href="#"><h2>Contact</h2></a></li>
+            </ul>
+            
+            </div>
+            </div>
+        </div>
     </body>
 </html>

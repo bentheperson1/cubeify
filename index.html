@@ -9,33 +9,62 @@
         <link rel="stylesheet" href="styles.css">
     </head>
     <body>
-        <div class="header-bg">
-            <br>
-            <img src="Cuebify_GameJolt.png" class="header pixel-art">
+        <div class="pixel-art">
+            <div class="container">
+                <div class="logo">
+                    <a href="#"><img src="images/Cuebify_GameJolt.png" alt="logo"></a>
+                </div>
+            <div class="navbar">
+            
+            <div class="icon-bar" onclick="Show()">
+                <i></i>
+                <i></i>
+                <i></i>
+            </div>
+            
+            <ul id="nav-lists pixel-art">
+                <li class="close"><span onclick="Hide()">×</span></li>
+                <li><a href="index.html"><h2>Home</h2></a></li>
+                <li><a href="Games.html"><h2>Games</h2></a></li>
+                <li><a href="#"><h2>Team</h2></a></li>
+                <li><a href="#"><h2>Contact</h2></a></li>
+            </ul>
+            
+            </div>
+            </div>
+            
+            <h1>Welcome to Cubeify Games!</h1>
+            
             <h2>
-                Cubeify Games
+                We are a virtual game studio based out of California.
             </h2>
-            <br>
-        </div>
-        <div class="topnav pixel-art">
-            <a class="active" href="index.html"><span>
-                    <h1>Home</h1>
-                </span>
-            </a>
-            <a href="Games.html"><span>
-                    <h1>Games</h1>
-                </span>
-            </a>
-            <a href="team.html"><span>
-                    <h1>Team</h1>
-                </span>
-            </a>
-        </div>
-        <main>
-            <h1 style="text-shadow: 0px 4px black;">
-                Welcome to the official website of Cubeify Games!<br>We're a compeltely online game development studio based out of California & Texas, but we have team members across the globe.<br>Some of the games we've made include: White Noise, PocketGachi, and MageStar.
-            </h1>
-        </main>
-        <script src="" async defer></script>
+        <script>
+            var slideIndex = 1;
+            showSlides(slideIndex);
+            
+            function plusSlides(n) {
+              showSlides(slideIndex += n);
+            }
+            
+            function currentSlide(n) {
+              showSlides(slideIndex = n);
+            }
+            
+            function showSlides(n) {
+              var i;
+              var slides = document.getElementsByClassName("mySlides");
+              var dots = document.getElementsByClassName("dot");
+              if (n > slides.length) {slideIndex = 1}    
+              if (n < 1) {slideIndex = slides.length}
+              for (i = 0; i < slides.length; i++) {
+                  slides[i].style.display = "none";  
+              }
+              for (i = 0; i < dots.length; i++) {
+                  dots[i].className = dots[i].className.replace(" active", "");
+              }
+              slides[slideIndex-1].style.display = "block";  
+              dots[slideIndex-1].className += " active";
+            }
+            </script>
     </body>
 </html>
